@@ -600,7 +600,7 @@
         <h2 class="section-heading reveal">Michael S. Omar</h2>
         <p class="reveal">With over two decades of legal practice, Michael S. Omar has built his career on a single conviction — that the law exists to protect people, and that every person who walks through his door deserves to have someone fight for them with everything they have.</p>
         <p class="reveal">Michael earned his law degree from The British University in Egypt (BUE), where he developed a rigorous foundation in both civil and common law traditions. Over the following 20+ years, he has represented individuals in civil rights disputes, guided families through some of the most difficult moments of their lives, and protected investors against those who abused their trust.</p>
-        <p class="reveal">He founded Shepherd Stewardship out of a deep-rooted passion for civil rights and justice and a belief that personal, principled legal representation should be available to everyone who needs it. When you work with Michael, you work directly with him. No hand-offs, no shortcuts, no compromise.</p>
+        <p class="reveal">He founded Shepherd Stewardship out of a deep-rooted passion for civil rights and justice — and a belief that personal, principled legal representation should be available to everyone who needs it. When you work with Michael, you work directly with him. No hand-offs, no shortcuts, no compromise.</p>
         <div class="bio-credentials reveal">
           <span class="bio-tag">Civil rights</span>
           <span class="bio-tag">Family law</span>
@@ -678,18 +678,18 @@
         </div>
       </div>
       <div class="reveal">
-        <form class="contact-form" onsubmit="handleSubmit(event)">
+        <form class="contact-form" action="https://formspree.io/f/xbdbazkd" method="POST">
           <div class="field">
             <label for="name">Your name</label>
-            <input type="text" id="name" placeholder="Full name" required />
+            <input type="text" id="name" name="name" placeholder="Full name" required />
           </div>
           <div class="field">
             <label for="email">Email address</label>
-            <input type="email" id="email" placeholder="you@email.com" required />
+            <input type="email" id="email" name="email" placeholder="you@email.com" required />
           </div>
           <div class="field">
             <label for="matter">Matter type</label>
-            <select id="matter">
+            <select id="matter" name="matter">
               <option value="">Select a practice area</option>
               <option>Civil rights</option>
               <option>Family law</option>
@@ -699,7 +699,7 @@
           </div>
           <div class="field">
             <label for="message">Brief description</label>
-            <textarea id="message" placeholder="Tell us a little about your situation…" required></textarea>
+            <textarea id="message" name="message" placeholder="Tell us a little about your situation…" required></textarea>
           </div>
           <button type="submit" class="form-btn" id="submit-btn">Send message</button>
         </form>
@@ -733,14 +733,7 @@
   }, { threshold: 0.12 });
   reveals.forEach(el => observer.observe(el));
 
-  // Form
-  function handleSubmit(e) {
-    e.preventDefault();
-    const btn = document.getElementById('submit-btn');
-    btn.textContent = 'Message sent ✓';
-    btn.style.background = '#1a3a2a';
-    btn.disabled = true;
-  }
+
 </script>
 </body>
 </html>
